@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Web Programcılığı Testi</title>
+</head>
+<body>
+
+<h1>Web Programcılığı Testi</h1>
+<hr>
+
+<form action="submit_test.html" method="post">
+  
+  <h3>1. HTML nedir?</h3>
+  <input type="text" name="question1" placeholder="Cevabınızı yazınız" required>
+
+  <h3>2. CSS açılımı nedir?</h3>
+  <input type="radio" name="question2" value="Cascading Style Sheets" required> Cascading Style Sheets<br>
+  <input type="radio" name="question2" value="Computer Style Sheets" required> Computer Style Sheets<br>
+  <input type="radio" name="question2" value="Creative Style Sheets" required> Creative Style Sheets
+
+  <h3>3. JavaScript hangi dosya uzantısını kullanır?</h3>
+  <select name="question3" required>
+    <option value=".js">.js</option>
+    <option value=".html">.html</option>
+    <option value=".css">.css</option>
+  </select>
+
+  <h3>4. Hangi etiket HTML başlığını tanımlar?</h3>
+  <input type="checkbox" name="question4" value="head"> &lt;head&gt;<br>
+  <input type="checkbox" name="question4" value="title"> &lt;title&gt;<br>
+  <input type="checkbox" name="question4" value="body"> &lt;body&gt;<br>
+  
+  <h3>5. Aşağıdaki alana kod yazınız:</h3>
+  <textarea name="question5" rows="4" cols="50" placeholder="Kodunuzu buraya yazınız"></textarea>
+
+  <h3>6. Not ortalamanızı belirtiniz:</h3>
+  <input type="number" name="average" min="0" max="100" required>
+
+  <h3>7. Hangi tarihte sınava girdiniz?</h3>
+  <input type="date" name="examDate" required>
+
+  <h3>8. Sınav saati:</h3>
+  <input type="time" name="examTime" required>
+
+  <h3>9. Ekran parlaklık oranınızı giriniz:</h3>
+  <input type="range" name="brightness" min="0" max="100">
+
+  <h3>10. Dosya yükleyin:</h3>
+  <input type="file" name="uploadFile">
+
+  <input type="submit" value="Testi Gönder">
+</form>
+
+</body>
+</html>
