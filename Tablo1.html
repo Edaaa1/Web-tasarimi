@@ -268,3 +268,66 @@
 
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HTML Tablo Düzeni</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  table {
+    width: 80%;
+    border-collapse: collapse;
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  th, td {
+    border: 1px solid #333;
+    padding: 20px;
+    font-size: 18px;
+  }
+
+  th {
+    font-size: 24px;
+    padding: 10px;
+    background-color: #ddd;
+  }
+</style>
+</head>
+<body>
+
+<h2 style="text-align: center;">HTML Tablo</h2>
+
+<table>
+  <tr>
+    <td colspan="3">Hücre 1</td>
+  </tr>
+  <tr>
+    <td rowspan="3">Hücre 4</td>
+    <td>Hücre 5</td>
+    <td>Hücre 6</td>
+    <td>Hücre 7</td>
+  </tr>
+  <tr>
+    <td colspan="3">Hücre 8</td>
+  </tr>
+  <tr>
+    <td>Hücre 9</td>
+    <td colspan="2">Hücre 10</td>
+  </tr>
+</table>
+
+</body>
+</html>
