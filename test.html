@@ -8,10 +8,11 @@
         body {
             font-family: Arial, sans-serif;
             margin: 20px;
-            background-color: #f4f4f4;
+            background-color: #e8f5e9; /* Yumuşak yeşil arka plan rengi */
         }
         h1 {
             text-align: center;
+            color: #388e3c; /* Başlık rengi */
         }
         form {
             background-color: white;
@@ -89,43 +90,63 @@
         <input type="file" id="file" name="file">
     </div>
 
+    <h3>8. HTML nedir?</h3>
+    <input type="text" name="question1" placeholder="Cevabınızı yazınız" required>
+
+    <h3>9. CSS açılımı nedir?</h3>
+    <label><input type="radio" name="question2" value="Cascading Style Sheets" required> Cascading Style Sheets</label>
+    <label><input type="radio" name="question2" value="Computer Style Sheets" required> Computer Style Sheets</label>
+    <label><input type="radio" name="question2" value="Creative Style Sheets" required> Creative Style Sheets</label>
+
+    <h3>10. JavaScript hangi dosya uzantısını kullanır?</h3>
+    <select name="question3" required>
+        <option value=".js">.js</option>
+        <option value=".html">.html</option>
+        <option value=".css">.css</option>
+    </select>
+
+    <h3>11. Hangi etiket HTML başlığını tanımlar?</h3>
+    <label><input type="checkbox" name="question4" value="head"> &lt;head&gt;</label>
+    <label><input type="checkbox" name="question4" value="title"> &lt;title&gt;</label>
+    <label><input type="checkbox" name="question4" value="body"> &lt;body&gt;</label>
+
     <div class="question">
-        <label for="range">8. O'dan 100'e kadar bir sayı seçiniz:</label>
+        <label for="range">12. O'dan 100'e kadar bir sayı seçiniz:</label>
         <input type="range" id="range" name="range" min="0" max="100">
     </div>
 
     <div class="question">
-        <label for="search">9. Arama Yapın:</label>
+        <label for="search">13. Arama Yapın:</label>
         <input type="search" id="search" name="search" placeholder="Arama yapınız">
     </div>
 
     <div class="question">
-        <label for="color">10. Renk Seçiniz:</label>
+        <label for="color">14. Renk Seçiniz:</label>
         <input type="color" id="color" name="color" value="#0000ff">
     </div>
 
     <div class="question">
-        <label for="date">11. Tarih Seçiniz:</label>
+        <label for="date">15. Tarih Seçiniz:</label>
         <input type="date" id="date" name="date" required>
     </div>
 
     <div class="question">
-        <label for="datetime">12. Tarih ve Saat Seçiniz:</label>
+        <label for="datetime">16. Tarih ve Saat Seçiniz:</label>
         <input type="datetime-local" id="datetime" name="datetime">
     </div>
 
     <div class="question">
-        <label for="month">13. Hangi Yılda ve Ayda Doğdunuz?</label>
+        <label for="month">17. Hangi Yılda ve Ayda Doğdunuz?</label>
         <input type="month" id="month" name="month">
     </div>
 
     <div class="question">
-        <label for="time">14. Hangi saatte sizi arayalım?</label>
+        <label for="time">18. Hangi saatte sizi arayalım?</label>
         <input type="time" id="time" name="time" required>
     </div>
 
     <div class="question">
-        <label for="textarea">15. Açıklama:</label>
+        <label for="textarea">19. Açıklama:</label>
         <textarea id="textarea" name="description" rows="4" placeholder="Açıklamanızı buraya yazınız"></textarea>
     </div>
 
