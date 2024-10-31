@@ -4,54 +4,134 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Web Programcılığı Testi</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .form-container {
+    width: 600px;
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+
+  .form-container h1 {
+    text-align: center;
+    font-size: 26px;
+    color: #333;
+    margin-bottom: 15px;
+  }
+
+  .form-container hr {
+    border: none;
+    height: 1px;
+    background-color: #ddd;
+    margin-bottom: 20px;
+  }
+
+  .form-container h3 {
+    font-size: 18px;
+    color: #444;
+    margin-top: 20px;
+  }
+
+  .form-container input[type="text"],
+  .form-container input[type="number"],
+  .form-container input[type="date"],
+  .form-container input[type="time"],
+  .form-container input[type="file"],
+  .form-container select,
+  .form-container textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 5px;
+  }
+
+  .form-container input[type="radio"],
+  .form-container input[type="checkbox"] {
+    margin-right: 10px;
+  }
+
+  .form-container input[type="range"] {
+    width: 100%;
+  }
+
+  .form-container input[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .form-container input[type="submit"]:hover {
+    background-color: #45a049;
+  }
+</style>
 </head>
 <body>
 
-<h1>Web Programcılığı Testi</h1>
-<hr>
+<div class="form-container">
+  <h1>Web Programcılığı Testi</h1>
+  <hr>
 
-<form action="submit_test.html" method="post">
-  
-  <h3>1. HTML nedir?</h3>
-  <input type="text" name="question1" placeholder="Cevabınızı yazınız" required>
+  <form action="submit_test.html" method="post">
+    
+    <h3>1. HTML nedir?</h3>
+    <input type="text" name="question1" placeholder="Cevabınızı yazınız" required>
 
-  <h3>2. CSS açılımı nedir?</h3>
-  <input type="radio" name="question2" value="Cascading Style Sheets" required> Cascading Style Sheets<br>
-  <input type="radio" name="question2" value="Computer Style Sheets" required> Computer Style Sheets<br>
-  <input type="radio" name="question2" value="Creative Style Sheets" required> Creative Style Sheets
+    <h3>2. CSS açılımı nedir?</h3>
+    <input type="radio" name="question2" value="Cascading Style Sheets" required> Cascading Style Sheets<br>
+    <input type="radio" name="question2" value="Computer Style Sheets" required> Computer Style Sheets<br>
+    <input type="radio" name="question2" value="Creative Style Sheets" required> Creative Style Sheets
 
-  <h3>3. JavaScript hangi dosya uzantısını kullanır?</h3>
-  <select name="question3" required>
-    <option value=".js">.js</option>
-    <option value=".html">.html</option>
-    <option value=".css">.css</option>
-  </select>
+    <h3>3. JavaScript hangi dosya uzantısını kullanır?</h3>
+    <select name="question3" required>
+      <option value=".js">.js</option>
+      <option value=".html">.html</option>
+      <option value=".css">.css</option>
+    </select>
 
-  <h3>4. Hangi etiket HTML başlığını tanımlar?</h3>
-  <input type="checkbox" name="question4" value="head"> &lt;head&gt;<br>
-  <input type="checkbox" name="question4" value="title"> &lt;title&gt;<br>
-  <input type="checkbox" name="question4" value="body"> &lt;body&gt;<br>
-  
-  <h3>5. Aşağıdaki alana kod yazınız:</h3>
-  <textarea name="question5" rows="4" cols="50" placeholder="Kodunuzu buraya yazınız"></textarea>
+    <h3>4. Hangi etiket HTML başlığını tanımlar?</h3>
+    <input type="checkbox" name="question4" value="head"> &lt;head&gt;<br>
+    <input type="checkbox" name="question4" value="title"> &lt;title&gt;<br>
+    <input type="checkbox" name="question4" value="body"> &lt;body&gt;<br>
+    
+    <h3>5. Aşağıdaki alana kod yazınız:</h3>
+    <textarea name="question5" rows="4" cols="50" placeholder="Kodunuzu buraya yazınız"></textarea>
 
-  <h3>6. Not ortalamanızı belirtiniz:</h3>
-  <input type="number" name="average" min="0" max="100" required>
+    <h3>6. Not ortalamanızı belirtiniz:</h3>
+    <input type="number" name="average" min="0" max="100" required>
 
-  <h3>7. Hangi tarihte sınava girdiniz?</h3>
-  <input type="date" name="examDate" required>
+    <h3>7. Hangi tarihte sınava girdiniz?</h3>
+    <input type="date" name="examDate" required>
 
-  <h3>8. Sınav saati:</h3>
-  <input type="time" name="examTime" required>
+    <h3>8. Sınav saati:</h3>
+    <input type="time" name="examTime" required>
 
-  <h3>9. Ekran parlaklık oranınızı giriniz:</h3>
-  <input type="range" name="brightness" min="0" max="100">
+    <h3>9. Ekran parlaklık oranınızı giriniz:</h3>
+    <input type="range" name="brightness" min="0" max="100">
 
-  <h3>10. Dosya yükleyin:</h3>
-  <input type="file" name="uploadFile">
+    <h3>10. Dosya yükleyin:</h3>
+    <input type="file" name="uploadFile">
 
-  <input type="submit" value="Testi Gönder">
-</form>
+    <input type="submit" value="Testi Gönder">
+  </form>
+</div>
 
 </body>
 </html>
