@@ -110,3 +110,115 @@
 
 </body>
 </html>
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bilgi Formu</title>
+</head>
+<body>
+
+<h1>Lütfen Formu Eksiksiz Doldurunuz.</h1>
+<hr>
+<form>
+  <h4>Hesap Bilgileriniz</h4>
+  <p> 
+    Kullanıcı Adı : 
+    <input type="text" name="username" placeholder="Kullanıcı adı giriniz" required> 
+  </p>
+  <p> 
+    Eposta : 
+    <input type="email" name="eposta" placeholder="Eposta giriniz" required> 
+  </p>
+  <p> 
+    Parola : 
+    <input type="password" name="parola" placeholder="Parola giriniz" required> 
+  </p>
+
+  <h4>Kişisel Bilgileriniz</h4>
+  <p> 
+    Ad: 
+    <input type="text" name="ad" placeholder="Adınızı giriniz" required> 
+  </p>
+  <p> 
+    Soyad :
+    <input type="text" name="soyad" placeholder="Soyadınızı giriniz" required> 
+  </p>
+  <p> 
+    Şehir : 
+    <select name="sehir" required>
+      <option value="">Seçiniz</option>
+      <option value="Ankara">Ankara</option>
+      <option value="İstanbul">İstanbul</option>
+      <option value="Kocaeli">Kocaeli</option>
+    </select> 
+  </p>
+  <p> 
+    Cinsiyet : 
+    <input type="radio" name="cinsiyet" value="Erkek" required> Erkek
+    <input type="radio" name="cinsiyet" value="Kadın" required> Kadın 
+  </p>
+  <p> 
+    Hobileriniz : 
+    <input type="checkbox" name="hobiler" value="Sinema"> Sinema
+    <input type="checkbox" name="hobiler" value="Gezmek"> Gezmek
+    <input type="checkbox" name="hobiler" value="Spor"> Spor
+    <input type="checkbox" name="hobiler" value="Kitap"> Kitap 
+  </p>
+  
+  <input type="submit" value="Kaydet">
+</form>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HTML Table</title>
+<style>
+  table {
+    width: 60%;
+    border-collapse: collapse;
+    margin: 20px auto;
+    text-align: center;
+  }
+  th {
+    font-size: 24px;
+    padding: 10px;
+  }
+  td {
+    border: 1px solid black;
+    padding: 20px;
+  }
+</style>
+</head>
+<body>
+
+<h2 style="text-align: center;">HTML Table</h2>
+
+<table>
+  <tr>
+    <td colspan="3">Cell 1</td>
+  </tr>
+  <tr>
+    <td rowspan="2">Cell 4</td>
+    <td>Cell 5</td>
+    <td>Cell 6</td>
+    <td>Cell 7</td>
+  </tr>
+  <tr>
+    <td colspan="3">Cell 8</td>
+  </tr>
+  <tr>
+    <td>Cell 9</td>
+    <td>Cell 10</td>
+  </tr>
+</table>
+
+</body>
+</html>
