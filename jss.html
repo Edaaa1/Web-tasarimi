@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jss/Gizle</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        .image-container {
+            margin-top: 20px;
+        }
+        .image-container img {
+            display: none;
+            max-width: 300px;
+            margin: 10px;
+        }
+        button {
+            margin: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Rastgele Arka Plan ve Resim Göster/Gizle</h1>
+    <button onclick="toggleImage(0)">Resim 1 Göster/Gizle</button>
+    <button onclick="toggleImage(1)">Resim 2 Göster/Gizle</button>
+    <button onclick="toggleImage(2)">Resim 3 Göster/Gizle</button>
+    
+    <div class="image-container">
+        <img id="img0" src="resimler/forest.jpg" alt="Orman Manzarası">
+        <img id="img1" src="resimler/lake.jpg" alt="Göl Manzarası">
+        <img id="img2" src="resimler/mountains.jpg" alt="Dağ Manzarası">
+    </div>
+
+    <script>
+
+        const backgrounds = [
+            'https://unsplash.com/photos/Xn4vqAc0RuQ/download?force=true', 
+            'https://unsplash.com/photos/IDTEXXXfS44/download?force=true', 
+            'https://unsplash.com/photos/hnjvUyHxtl0/download?force=true', 
+            'https://www.pexels.com/photo/green-grass-field-during-sunrise-533389/', 
+            'https://www.pexels.com/photo/gray-rock-formation-under-blue-sky-2898311/',
+        ];
+
+
+        document.body.style.backgroundImage = `url(${backgrounds[Math.floor(Math.random() * backgrounds.length)]})`;
+
+
+        function toggleImage(index) {
+            const img = document.getElementById(`img${index}`);
+            img.style.display = img.style.display === "none" || img.style.display === "" ? "block" : "none";
+        }
+    </script>
+</body>
+</html>
