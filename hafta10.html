@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Duyuru ve Canvas</title>
+    <title>Hafta10</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -28,6 +28,11 @@
             visibility: hidden;
             opacity: 0;
             transition: visibility 0s, opacity 0.5s ease-in-out;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 300px;
+            height: 100px;
         }
         .popup.show {
             visibility: visible;
@@ -40,21 +45,21 @@
     </style>
 </head>
 <body>
-    <div id="popup" class="popup">hellooo</div>
+    <div id="popup" class="popup">Bu bir duyuru penceresidir!</div>
 
     <canvas id="gridCanvas" width="500" height="500"></canvas>
 
     <script>
-        
+
         const popup = document.getElementById('popup');
         popup.classList.add('show');
 
-        
+
         setTimeout(() => {
             popup.classList.remove('show');
         }, 5000);
 
-        
+
         const canvas = document.getElementById('gridCanvas');
         const ctx = canvas.getContext('2d');
 
@@ -62,12 +67,12 @@
         const cols = 10;
         const cellSize = 50;
 
-        
+
         function getRandomColor() {
             return `rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)})`;
         }
 
-        
+
         for (let i = 0; i < rows; i++) {
             for (let j = 0; j < cols; j++) {
                 ctx.fillStyle = getRandomColor();
