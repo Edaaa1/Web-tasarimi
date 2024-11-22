@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas - Çemberler</title>
+</head>
+<body>
+    <canvas id="myCanvas" width="400" height="400" style="border:1px solid black;"></canvas>
+    <script>
+        var c = document.getElementById("myCanvas");
+        var ctx = c.getContext("2d");
+
+
+        const rows = 8; 
+        const cols = 8; 
+        const radius = 15; 
+        const padding = 10; 
+        const startX = 30; 
+        const startY = 30; 
+
+
+        function getColor(intensity) {
+
+            return `rgb(${intensity}, ${intensity}, ${intensity})`;
+        }
+
+
+        for (let i = 0; i < rows; i++) {
+            for (let j = 0; j < cols; j++) {
+                const x = startX + j * (2 * radius + padding);
+                const y = startY + i * (2 * radius + padding);
+
+
+                const intensity = 255 - (i * 30 + j * 10);
+
+
+                ctx.beginPath();
+                ctx.arc(x, y, radius, 0, 2 * Math.PI);
+                ctx.strokeStyle = getColor(Math.max(0, intensity)); 
+                ctx.lineWidth = 2;
+                ctx.stroke();
+            }
+        }
+    </script>
+</body>
+</html>
+
+
