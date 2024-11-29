@@ -1,7 +1,126 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EDANUR TOKTAŞ</title>
+    <style>
+        /* Genel Ayarlar */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #8e44ad, #3498db);
+            color: #fff;
+        }
 
+        /* Başlık */
+        h1 {
+            text-align: center;
+            font-size: 2.8rem;
+            margin: 0;
+            padding: 20px 0;
+            background: rgba(0, 0, 0, 0.3);
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Ana Konteyner */
+        .container {
+            max-width: 900px;
+            margin: 20px auto;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(8px);
+        }
+
+        /* Liste Stili */
+        ol {
+            padding: 0;
+        }
+        li {
+            list-style: none;
+            margin: 20px 0;
+            font-size: 1.3rem;
+        }
+        li::before {
+            content: "➤";
+            color: #ffd700;
+            margin-right: 10px;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        ul li::before {
+            content: "•";
+            color: #f39c12;
+        }
+
+        /* Linkler */
+        a {
+            text-decoration: none;
+            color: #ffd700;
+            font-weight: bold;
+            transition: color 0.3s, text-shadow 0.3s;
+        }
+        a:hover {
+            color: #fff;
+            text-shadow: 0px 0px 10px #ffd700;
+        }
+
+        /* Altbilgi */
+        footer {
+            text-align: center;
+            padding: 15px 0;
+            background: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            margin-top: 20px;
+            font-size: 0.9rem;
+            box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
 <body>
-    <h2>Edanur Toktaş</h2>
+    <h1>EDANUR TOKTAŞ</h1>
+    <div class="container">
+        <ol>
+            <li>Hafta 2
+                <ul>
+                    <li><a href="Hafta1.html">Masal</a></li>
+                </ul>
+            </li>
+            <li>Hafta 3
+                <ul>
+                    <li><a href="Tablolar.html">Tablolar</a></li>
+                </ul>
+            </li>
+            <li>Hafta 4
+                <ul>
+                    <li><a href="Form1.html">Form</a></li>
+                    <li><a href="test.html">Test</a></li>
+                </ul>
+            </li>
+            <li>Hafta 5
+                <ul>
+                    <li><a href="css.html">CSS</a></li>
+                </ul>
+            </li>
+            <li>Hafta 6
+                <ul>
+                    <li><a href="gridbox.html">Flex Box</a></li>
+                </ul>
+            </li>
+            <li>Hafta 7
+                <ul>
+                    <li><a href="animasyon.html">Animasyon</a></li>
+                    <li><a href="bootstrapcard.html">Bootstrap Kart</a></li>
+                </ul>
+            </li>
+        </ol>
+    </div>
+    <footer>
+        © 2024 EDANUR TOKTAŞ. Tüm Hakları Saklıdır.
+    </footer>
 </body>
 </html>
