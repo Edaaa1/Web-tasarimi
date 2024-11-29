@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tablo</title>
+    <title>Dinamik Tablo Oluşturucu</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -37,7 +37,6 @@
 <body>
     <h1>Dinamik Tablo Oluşturucu</h1>
 
-    <!-- Form -->
     <form method="POST">
         <label for="rows">Satır Sayısı:</label>
         <input type="number" id="rows" name="rows" min="1" required>
@@ -46,12 +45,13 @@
         <button type="submit">Tablo Oluştur</button>
     </form>
 
-    <!-- PHP Tablo -->
+
     <?php
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
             $rows = intval($_POST['rows']);
             $cols = intval($_POST['cols']);
+
 
             echo "<table>";
             for ($i = 1; $i <= $rows; $i++) {
