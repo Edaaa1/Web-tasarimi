@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PHP Dosya İşlemleri</title>
+</head>
+<body>
+    <form method="post">
+        <button name="saveMessage">1. Mesajı Dosyaya Kaydet</button>
+        <button name="clearFile">2. Dosyanın İçini Sil</button>
+        <button name="randomNumber">3. Rastgele Sayı Yaz</button>
+    </form>
+
+    <?php
+    $filename = "actions.txt"; 
+
+
+    if (isset($_POST['saveMessage'])) {
+        $message = "Bu bir test mesajıdır.\n"; 
+        file_put_contents($filename, $message, FILE_APPEND); 
+        echo "Mesaj dosyaya kaydedildi.";
+    }
+
+
+    if (isset($_POST['clearFile'])) {
+        file_put_contents($filename, ""); 
+        echo "Dosya temizlendi.";
+    }
+
+
+    if (isset($_POST['randomNumber'])) {
+        $randomNumber = rand(1, 100); 
+        file_put_contents($filename, "Rastgele Sayı: $randomNumber\n", FILE_APPEND); 
+        echo "Rastgele sayı dosyaya kaydedildi: $randomNumber";
+    }
+    ?>
+</body>
+</html>
