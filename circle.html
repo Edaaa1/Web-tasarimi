@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>circle</title>
+</head>
+<body>
+    <canvas id="canvas" width="400" height="400" style="border:1px solid black;"></canvas>
+    <script>
+        const canvas = document.getElementById('canvas');
+        const ctx = canvas.getContext('2d');
+
+        const rows = 8; // Satır sayısı
+        const cols = 8; // Sütun sayısı
+        const radius = 15; // Çemberlerin yarıçapı
+        const padding = 10; // Çemberler arasındaki boşluk
+        const startX = 30; // Başlangıç X koordinatı
+        const startY = 30; // Başlangıç Y koordinatı
+
+        const gradient = ctx.createLinearGradient(0, 0, canvas.width, canvas.height);
+        gradient.addColorStop(0, 'cyan');
+        gradient.addColorStop(0.5, 'green');
+        gradient.addColorStop(1, 'blue');
+
+
+        for (let i = 0; i < rows; i++) {
+            for (let j = 0; j < cols; j++) {
+                const x = startX + j * (2 * radius + padding);
+                const y = startY + i * (2 * radius + padding);
+
+                ctx.beginPath();
+                ctx.arc(x, y, radius, 0, Math.PI * 2);
+                ctx.strokeStyle = gradient;
+                ctx.lineWidth = 2;
+                ctx.stroke();
+            }
+        }
+    </script>
+</body>
+</html>
