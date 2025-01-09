@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dinamik Tablo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background: #e3f2fd;
+            padding: 20px;
+            color: #2c3e50;
+        }
+        h1 {
+            color: #1565c0; 
+        }
+        form {
+            margin-bottom: 20px;
+            padding: 10px;
+            background: #bbdefb; 
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+        }
+        label {
+            margin-right: 10px;
+        }
+        input[type="number"] {
+            padding: 5px;
+            border: 1px solid #90caf9;
+            border-radius: 4px;
+            width: 60px;
+            text-align: center;
+        }
+        button {
+            padding: 5px 15px;
+            border: none;
+            background: #1976d2; 
+            color: white;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #1565c0;
+        }
+        table {
+            margin: 20px auto;
+            border-collapse: collapse;
+            width: auto;
+            max-width: 80%;
+            background: white; 
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+        table, th, td {
+            border: 1px solid #90caf9; 
+        }
+        th, td {
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background: #1976d2;
+            color: white;
+        }
+        td {
+            background: #e3f2fd; 
+        }
+    </style>
+</head>
+<body>
+    <h1>Tablo</h1>
+
+    <!-- Form -->
+    <form method="POST">
+        <label for="rows">Satır Sayısı:</label>
+        <input type="number" id="rows" name="rows" min="1" required>
+        <label for="cols">Sütun Sayısı:</label>
+        <input type="number" id="cols" name="cols" min="1" required>
+        <button type="submit">Tablo Oluştur</button>
+    </form>
+
+    <!-- PHP Tablo -->
+    <?php
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+            
+            $rows = intval($_POST['rows']);
+            $cols = intval($_POST['cols']);
+
+
+            echo "<table>";
+            echo "<tr>";
+            for ($i = 1; $i <= $cols; $i++) {
+                echo "<th>Sütun $i</th>";
+            }
+            echo "</tr>";
+
+            for ($i = 1; $i <= $rows; $i++) {
+                echo "<tr>";
+                for ($j = 1; $j <= $cols; $j++) {
+                    $randomNumber = rand(1, 100);
+                    echo "<td>$randomNumber</td>";
+                }
+                echo "</tr>";
+            }
+            echo "</table>";
+        }
+    ?>
+</body>
+</html>
